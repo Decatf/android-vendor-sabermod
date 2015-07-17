@@ -30,6 +30,10 @@ ifneq ($(filter %shamu,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := shamu
 endif
 
+ifneq ($(filter %p4wifi,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := p4wifi
+endif
+
 # Filter ROM base
 ifneq ($(filter aosp% boostpop% pa% twisted%,$(TARGET_PRODUCT)),)
   TARGET_BASE_ROM := aosp
