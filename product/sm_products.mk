@@ -34,6 +34,14 @@ ifneq ($(filter %p4wifi,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := p4wifi
 endif
 
+ifneq ($(filter %p4,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := p4
+endif
+
+ifneq ($(filter %p4wifi,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := p4tmo
+endif
+
 # Filter ROM base
 ifneq ($(filter aosp% boostpop% pa% twisted%,$(TARGET_PRODUCT)),)
   TARGET_BASE_ROM := aosp
